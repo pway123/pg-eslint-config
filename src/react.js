@@ -1,5 +1,4 @@
 module.exports = {
-  files: ["*.ts", "*.tsx"],
   extends: ["plugin:react/recommended", "plugin:jsx-a11y/recommended"],
   plugins: ["react", "jsx-a11y", "react-hooks"],
   settings: {
