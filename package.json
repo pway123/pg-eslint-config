@@ -1,0 +1,37 @@
+{
+  "name": "@pgateway/eslint-config-base",
+  "version": "0.1.0",
+  "description": "pgateway base eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "typescript": "^3.7.4",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^5.16.0",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "typescript": "*",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "files": [
+    "src/",
+    "index.js",
+    "react.js"
+  ],
+  "eslintConfig": {
+    "extends": "./index.js"
+  }
+}
