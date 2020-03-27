@@ -9,12 +9,6 @@ module.exports = {
   rules: {
     "react/prop-types": 0,
     "react/forbid-prop-types": 0,
-    "react/jsx-max-props-per-line": [
-      2,
-      {
-        maximum: 3
-      }
-    ],
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] }
