@@ -3,7 +3,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
   ],
   plugins: ["@typescript-eslint"],
   parser: "@typescript-eslint/parser",
@@ -13,8 +13,8 @@ module.exports = {
       "error",
       {
         destructuring: "any",
-        ignoreReadBeforeAssign: true
-      }
+        ignoreReadBeforeAssign: true,
+      },
     ],
     "no-var": 2,
     "no-shadow": 2,
@@ -23,15 +23,15 @@ module.exports = {
       0,
       {
         vars: "local",
-        args: "after-used"
-      }
+        args: "after-used",
+      },
     ],
     "no-cond-assign": [2, "always"],
     "no-console": [
       1,
       {
-        allow: ["warn", "error"]
-      }
+        allow: ["warn", "error"],
+      },
     ],
     "no-debugger": 1,
     "no-constant-condition": 1,
@@ -58,8 +58,8 @@ module.exports = {
     "dot-notation": [
       2,
       {
-        allowKeywords: true
-      }
+        allowKeywords: true,
+      },
     ],
     eqeqeq: 2,
     "guard-for-in": 2,
@@ -100,10 +100,17 @@ module.exports = {
     "@typescript-eslint/type-annotation-spacing": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/interface-name-prefix": [
+    "@typescript-eslint/naming-convention": [
       "error",
-      { prefixWithI: "always" }
+      {
+        selector: "interface",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Z]",
+          match: true,
+        },
+      },
     ],
-    "@typescript-eslint/no-use-before-define": ["off", { functions: true }]
-  }
+    "@typescript-eslint/no-use-before-define": ["off", { functions: true }],
+  },
 };
