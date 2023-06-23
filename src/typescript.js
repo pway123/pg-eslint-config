@@ -4,7 +4,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
   ],
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "import"],
   parser: "@typescript-eslint/parser",
   rules: {
     strict: [2, "never"],
@@ -111,5 +111,10 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-use-before-define": ["off", { functions: true }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
   },
 };
