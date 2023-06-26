@@ -110,6 +110,17 @@ module.exports = {
         },
       },
     ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "all",
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+        destructuredArrayIgnorePattern: "^_",
+      },
+    ],
     "@typescript-eslint/no-use-before-define": ["off", { functions: true }],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
