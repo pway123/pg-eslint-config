@@ -8,14 +8,6 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   rules: {
     strict: [2, "never"],
-    "prefer-const": [
-      "error",
-      {
-        destructuring: "any",
-        ignoreReadBeforeAssign: true,
-      },
-    ],
-    "no-var": 2,
     "no-shadow": 2,
     "no-shadow-restricted-names": 2,
     "no-unused-vars": [
@@ -25,7 +17,6 @@ module.exports = {
         args: "after-used",
       },
     ],
-    "no-cond-assign": [2, "always"],
     "no-console": [
       1,
       {
@@ -34,20 +25,16 @@ module.exports = {
     ],
     "no-debugger": 1,
     "no-constant-condition": 1,
-    "no-dupe-keys": 2,
     "no-duplicate-case": 2,
     "no-empty": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 0,
     "no-extra-semi": 2,
-    "no-func-assign": 2,
     "no-inner-declarations": 2,
     "no-invalid-regexp": 2,
     "no-irregular-whitespace": 2,
-    "no-obj-calls": 2,
     "no-reserved-keys": 0,
     "no-sparse-arrays": 2,
-    "no-unreachable": 2,
     "use-isnan": 2,
     "block-scoped-var": 2,
     "consistent-return": "error",
@@ -81,7 +68,6 @@ module.exports = {
     "no-octal-escape": 2,
     "no-param-reassign": 2,
     "no-proto": 2,
-    "no-redeclare": 2,
     "no-return-assign": [2, "except-parens"],
     "no-script-url": 2,
     "no-self-compare": 2,
