@@ -7,57 +7,52 @@ module.exports = {
   plugins: ["@typescript-eslint", "simple-import-sort", "import"],
   parser: "@typescript-eslint/parser",
   rules: {
-    strict: [2, "never"],
-    "no-shadow": 2,
-    "no-console": [
-      1,
+    "consistent-return": "error", // https://eslint.org/docs/latest/rules/consistent-return
+    complexity: ["warn", 15], // https://eslint.org/docs/latest/rules/complexity
+    curly: "error", // https://eslint.org/docs/latest/rules/curly
+    "default-case": "warn", // https://eslint.org/docs/latest/rules/default-case
+    "default-case-last": "warn", // https://eslint.org/docs/latest/rules/default-case-last
+    "default-param-last": "warn", // https://eslint.org/docs/latest/rules/default-param-last
+    eqeqeq: "error", // https://eslint.org/docs/latest/rules/eqeqeq
+    "guard-for-in": "warn", // https://eslint.org/docs/latest/rules/guard-for-in
+    "logical-assignment-operators": "warn", // https://eslint.org/docs/latest/rules/logical-assignment-operators
+    "no-caller": "error", // https://eslint.org/docs/latest/rules/no-caller
+    "no-console": ["warn", { allow: ["warn", "error"] }], // https://eslint.org/docs/latest/rules/no-console
+    "no-eval": "error", // https://eslint.org/docs/latest/rules/no-eval
+    "no-extend-native": "error", // https://eslint.org/docs/latest/rules/no-extend-native
+    "no-extra-bind": "error", // https://eslint.org/docs/latest/rules/no-extra-bind
+    "no-floating-decimal": "error", // https://eslint.org/docs/latest/rules/no-floating-decimal
+    "no-implicit-coercion": "warn", // https://eslint.org/docs/latest/rules/no-implicit-coercion
+    "no-implied-eval": "error", // https://eslint.org/docs/latest/rules/no-implied-eval
+    "no-loop-func": "error", // https://eslint.org/docs/latest/rules/no-loop-func
+    "no-multi-str": "error", // https://eslint.org/docs/latest/rules/no-multi-str
+    "no-nested-ternary": "error", // https://eslint.org/docs/latest/rules/no-nested-ternary
+    "no-new": "error", // https://eslint.org/docs/latest/rules/no-new
+    "no-new-func": "error", // https://eslint.org/docs/latest/rules/no-new-func
+    "no-new-object": "error", // https://eslint.org/docs/latest/rules/no-new-object
+    "no-new-wrappers": "error", // https://eslint.org/docs/latest/rules/no-new-wrappers
+    "no-octal-escape": "error", // https://eslint.org/docs/latest/rules/no-octal-escape
+    "no-param-reassign": "error", // https://eslint.org/docs/latest/rules/no-param-reassign
+    "no-promise-executor-return": "error", // https://eslint.org/docs/latest/rules/no-promise-executor-return
+    "no-proto": "error", // https://eslint.org/docs/latest/rules/no-proto
+    "no-return-assign": "error", // https://eslint.org/docs/latest/rules/no-return-assign
+    "no-script-url": "error", // https://eslint.org/docs/latest/rules/no-script-url
+    "no-self-compare": "error", // https://eslint.org/docs/latest/rules/no-self-compare
+    "no-sequences": "error", // https://eslint.org/docs/latest/rules/no-sequences
+    "no-shadow": "error", // https://eslint.org/docs/latest/rules/no-shadow
+    "no-throw-literal": "error", // https://eslint.org/docs/latest/rules/no-throw-literal
+    "one-var": ["error", "never"], // https://eslint.org/docs/latest/rules/one-var
+    "operator-assignment": "error", // https://eslint.org/docs/latest/rules/operator-assignment
+    radix: ["error", "as-needed"], // https://eslint.org/docs/latest/rules/radix
+    "wrap-iife": ["error", "inside"], // https://eslint.org/docs/latest/rules/wrap-iife
+    "@typescript-eslint/dot-notation": [
+      "error",
       {
-        allow: ["warn", "error"],
+        allowPrivateClassPropertyAccess: true,
+        allowProtectedClassPropertyAccess: true,
+        allowIndexSignaturePropertyAccess: true,
       },
-    ],
-    "block-scoped-var": 2,
-    "consistent-return": "error",
-    complexity: ["warn", 15],
-    curly: [2],
-    "default-case": "warn",
-    "dot-notation": [
-      2,
-      {
-        allowKeywords: true,
-      },
-    ],
-    eqeqeq: 2,
-    "guard-for-in": 2,
-    "no-caller": 2,
-    "no-eq-null": 2,
-    "no-eval": 2,
-    "no-extend-native": 2,
-    "no-extra-bind": 2,
-    "no-floating-decimal": 2,
-    "no-implied-eval": 2,
-    "no-lone-blocks": 2,
-    "no-loop-func": 2,
-    "no-multi-str": 2,
-    "no-native-reassign": 2,
-    "no-new": 2,
-    "no-new-func": 2,
-    "no-new-wrappers": 2,
-    "no-octal-escape": 2,
-    "no-param-reassign": 2,
-    "no-proto": 2,
-    "no-return-assign": [2, "except-parens"],
-    "no-script-url": 2,
-    "no-self-compare": 2,
-    "no-sequences": 2,
-    "no-throw-literal": 2,
-    radix: [2, "as-needed"],
-    "wrap-iife": [2, "any"],
-    yoda: 2,
-    quotes: [2, "single", "avoid-escape"],
-    "no-nested-ternary": 2,
-    "no-new-object": 2,
-    "no-underscore-dangle": "warn",
-    "one-var": [2, "never"],
+    ], // https://typescript-eslint.io/rules/dot-notation/
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -68,7 +63,15 @@ module.exports = {
           match: true,
         },
       },
-    ],
+    ], // https://typescript-eslint.io/rules/naming-convention
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        varsIgnorePattern: "^_",
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+      },
+    ], // https://typescript-eslint.io/rules/no-unused-vars/
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
