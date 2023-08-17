@@ -58,9 +58,6 @@ module.exports = {
     "no-new-object": 2,
     "no-underscore-dangle": "warn",
     "one-var": [2, "never"],
-    "@typescript-eslint/type-annotation-spacing": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -72,7 +69,6 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/no-use-before-define": ["off", { functions: true }],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
