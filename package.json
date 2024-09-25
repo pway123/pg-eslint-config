@@ -1,6 +1,6 @@
 {
   "name": "@pgateway/eslint-config-base",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "pgateway base eslint config",
   "main": "index.js",
   "scripts": {
@@ -8,34 +8,29 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@eslint/js": "^8.57.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.9.0",
+    "prettier": "3.3.3",
+    "typescript-eslint": "^8.7.0"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.4.1",
-    "@typescript-eslint/parser": "^4.4.1",
-    "eslint": "7.21.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "typescript": "^4.2.2"
+    "@types/eslint__js": "^8.42.3",
+    "jest": "^29.7.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4",
-    "@typescript-eslint/parser": ">=4",
-    "eslint": "^7",
-    "eslint-plugin-import": ">=2",
-    "eslint-plugin-jsx-a11y": ">=6",
-    "eslint-plugin-react": ">=7",
-    "eslint-plugin-react-hooks": ">=4",
-    "eslint-plugin-simple-import-sort": ">=10",
-    "typescript": ">=4"
+    "typescript": ">=4.7.4"
   },
   "files": [
-    "src/",
-    "index.js",
-    "react.js"
-  ],
-  "eslintConfig": {
-    "extends": "./index.js"
-  }
+    "index.js"
+  ]
 }
